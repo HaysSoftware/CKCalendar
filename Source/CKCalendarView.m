@@ -158,8 +158,6 @@
 		UILabel *dayOfWeekLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 		dayOfWeekLabel.textAlignment = NSTextAlignmentCenter;
 		dayOfWeekLabel.backgroundColor = [UIColor clearColor];
-		dayOfWeekLabel.shadowColor = [UIColor whiteColor];
-		dayOfWeekLabel.shadowOffset = CGSizeMake(0, 1);
 		[labels addObject:dayOfWeekLabel];
 		[self.calendarContainer addSubview:dayOfWeekLabel];
 	}
