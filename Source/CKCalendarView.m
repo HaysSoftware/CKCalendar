@@ -25,7 +25,7 @@
 #define TOP_HEIGHT 44
 #define DAYS_HEADER_HEIGHT 22
 #define DEFAULT_CELL_WIDTH 43
-#define CELL_BORDER_WIDTH 1
+#define CELL_BORDER_WIDTH 5
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed : ((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green : ((float)((rgbValue & 0xFF00) >> 8)) / 255.0 blue : ((float)(rgbValue & 0xFF)) / 255.0 alpha : 1.0]
 
@@ -217,7 +217,7 @@
 	newFrame.size.height = containerHeight + CALENDAR_MARGIN + TOP_HEIGHT;
 	self.frame = newFrame;
 
-	self.highlight.frame = CGRectMake(1, 1, self.bounds.size.width - 2, 1);
+	self.highlight.frame = CGRectMake(0, 40, 320, 1);
 
 	self.titleLabel.text = [self.dateFormatter stringFromDate:_monthShowing];
 	self.titleLabel.frame = CGRectMake(0, 0, self.bounds.size.width, TOP_HEIGHT);
@@ -272,7 +272,9 @@
 
 		if (self.selectedDate && [self date:self.selectedDate isSameDayAsDate:date]) {
 			[dateButton setTitleColor:item.selectedTextColor forState:UIControlStateNormal];
-			dateButton.backgroundColor = item.selectedBackgroundColor;
+			dateButton.layer.borderColor = [UIColor whiteColor].CGColor;
+			dateButton.layer.borderWidth = 2.0f;
+			dateButton.layer.cornerRadius = 20.0f;
 		}
 		else {
 			[dateButton setTitleColor:item.textColor forState:UIControlStateNormal];
