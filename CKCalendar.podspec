@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CKCalendar"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "A short description of CKCalendar."
 
   s.description  = <<-DESC
@@ -104,7 +104,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
