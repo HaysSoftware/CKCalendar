@@ -389,7 +389,7 @@
 	[self setDayOfWeekBackgroundColor:UIColorFromRGB(0xCCCFD5)];
 
 	[self setDateFont:[UIFont boldSystemFontOfSize:16.0f]];
-	[self setDateBorderColor:UIColorFromRGB(0xDAE1E6)];
+	[self setDateBorderColor:[UIColor clearColor]];
 }
 
 - (CGRect)_calculateDayCellFrame:(NSDate *)date {
