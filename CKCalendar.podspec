@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CKCalendar"
-  s.version      = “1.0.0”
-  s.summary      = “Private fork of CKCalendar."
+  s.version      = "0.0.1"
+  s.summary      = "A short description of CKCalendar."
 
   s.description  = <<-DESC
                    A longer description of CKCalendar in Markdown format.
@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = "UIKit", "QuartzCore", "CoreGraphics"
+  # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
