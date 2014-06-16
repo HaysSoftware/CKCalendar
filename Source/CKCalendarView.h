@@ -27,8 +27,8 @@
 @end
 
 typedef enum {
-    startSunday = 1,
-    startMonday = 2,
+	startSunday = 1,
+	startMonday = 2,
 } CKCalendarStartDay;
 
 @interface CKCalendarView : UIView
@@ -44,7 +44,7 @@ typedef enum {
 @property (nonatomic) BOOL onlyShowCurrentMonth;
 @property (nonatomic) BOOL adaptHeightToNumberOfWeeksInMonth;
 
-@property (nonatomic, weak) id<CKCalendarDelegate> delegate;
+@property (nonatomic, weak) id <CKCalendarDelegate> delegate;
 
 // Theming
 @property (nonatomic, strong) UIFont *titleFont;
