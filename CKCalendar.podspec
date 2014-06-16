@@ -11,7 +11,7 @@
     "Jason Kozemczak": "jason.kozemczak@gmail.com"
   },
   "source": {
-    "git": "https://github.com/jaykz52/CKCalendar.git",
+    "git": "https://github.com/SJApps/CKCalendar.git",
     "tag": "v1.0.0"
   },
   "platforms": {
