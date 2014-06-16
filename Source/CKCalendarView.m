@@ -21,7 +21,7 @@
 #import "CKCalendarView.h"
 
 #define BUTTON_MARGIN 4
-#define CALENDAR_MARGIN 5
+#define CALENDAR_MARGIN 0
 #define TOP_HEIGHT 44
 #define DAYS_HEADER_HEIGHT 22
 #define DEFAULT_CELL_WIDTH 43
@@ -144,11 +144,7 @@
 
 	// THE CALENDAR ITSELF
 	UIView *calendarContainer = [[UIView alloc] initWithFrame:CGRectZero];
-	calendarContainer.layer.borderWidth = 1.0f;
-	calendarContainer.layer.borderColor = [UIColor blackColor].CGColor;
 	calendarContainer.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
-	calendarContainer.layer.cornerRadius = 4.0f;
-	calendarContainer.clipsToBounds = YES;
 	[self addSubview:calendarContainer];
 	self.calendarContainer = calendarContainer;
 
