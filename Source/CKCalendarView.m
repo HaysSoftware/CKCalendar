@@ -279,6 +279,7 @@
 		else {
 			[dateButton setTitleColor:item.textColor forState:UIControlStateNormal];
 			dateButton.backgroundColor = item.backgroundColor;
+			dateButton.layer.borderWidth = 0.0f;
 		}
 
 		dateButton.frame = [self _calculateDayCellFrame:date];
