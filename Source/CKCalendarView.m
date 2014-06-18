@@ -134,13 +134,13 @@
 		[nextButton addTarget:self action:@selector(_moveCalendarToNextMonth) forControlEvents:UIControlEventTouchUpInside];
 		[self addSubview:nextButton];
 		self.nextButton = nextButton;
-	}
 
-	UIView *highlight = [[UIView alloc] initWithFrame:CGRectZero];
-	highlight.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
-	highlight.layer.cornerRadius = 6.0f;
-	[self addSubview:highlight];
-	self.highlight = highlight;
+		UIView *highlight = [[UIView alloc] initWithFrame:CGRectZero];
+		highlight.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.2];
+		highlight.layer.cornerRadius = 6.0f;
+		[self addSubview:highlight];
+		self.highlight = highlight;
+	}
 
 	// THE CALENDAR ITSELF
 	UIView *calendarContainer = [[UIView alloc] initWithFrame:CGRectZero];
