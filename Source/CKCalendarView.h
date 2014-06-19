@@ -67,6 +67,7 @@ typedef enum {
 
 - (void)_moveCalendarToPreviousMonth;
 - (void)_moveCalendarToNextMonth;
+- (void)setMonthShowing:(NSDate *)aMonthShowing;
 
 @end
 
