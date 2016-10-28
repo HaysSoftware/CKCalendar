@@ -19,10 +19,12 @@
 
 @interface CKDateItem : NSObject
 
-@property (nonatomic, strong) UIColor *backgroundColor;
-@property (nonatomic, strong) UIColor *selectedBackgroundColor;
 @property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIColor *backgroundColor;
+
 @property (nonatomic, strong) UIColor *selectedTextColor;
+@property (nonatomic, strong) UIColor *selectedBackgroundColor;
+@property (nonatomic, strong) UIColor *selectedBorderColor;
 
 @end
 
@@ -52,6 +54,12 @@ typedef enum {
 @property (nonatomic, strong) UIFont *dateOfWeekFont;
 @property (nonatomic, strong) UIColor *dayOfWeekTextColor;
 @property (nonatomic, strong) UIFont *dateFont;
+@property (nonatomic, strong) UIColor *todayHighlightColor;
+
+@property (nonatomic, strong, readonly) UIButton *prevButton;
+@property (nonatomic, strong, readonly) UIButton *nextButton;
+
+@property (nonatomic, assign, getter = isTodayHighlightEnabled) BOOL todayHighlightEnabled;
 
 - (void)setMonthButtonColor:(UIColor *)color;
 - (void)setInnerBorderColor:(UIColor *)color;
