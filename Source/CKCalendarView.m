@@ -272,7 +272,12 @@
 
 		if (self.selectedDate && [self date:self.selectedDate isSameDayAsDate:date]) {
 			[dateButton setTitleColor:item.selectedTextColor forState:UIControlStateNormal];
-			dateButton.layer.borderColor = [UIColor whiteColor].CGColor;
+			dateButton.backgroundColor = item.selectedBackgroundColor;
+			UIColor *borderColor = item.selectedBorderColor;
+			if (borderColor == nil) {
+				borderColor = [UIColor whiteColor];
+			}
+			dateButton.layer.borderColor = borderColor.CGColor;
 			dateButton.layer.borderWidth = 2.0f;
 			dateButton.layer.cornerRadius = 20.0f;
 		}
@@ -283,6 +288,18 @@
 		}
 
 		dateButton.frame = [self _calculateDayCellFrame:date];
+
+		if ([self _dateIsToday:dateButton.date]) {
+			if (self.isTodayHighlightEnabled) {
+				dateButton.layer.borderColor = self.todayHighlightColor.CGColor;
+				dateButton.layer.borderWidth = 1.0;
+				dateButton.layer.cornerRadius = 20.0;
+			}
+		}
+
+		if (dateButton.layer.cornerRadius > 0.0) {
+			dateButton.layer.cornerRadius = CGRectGetHeight(dateButton.frame) / 2.0;
+		}
 
 		[self.calendarContainer addSubview:dateButton];
 
